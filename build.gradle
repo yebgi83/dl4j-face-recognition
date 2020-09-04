@@ -1,0 +1,74 @@
+plugins {
+    id 'java'
+}
+
+group 'konantech-face-factory'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+// Yaml
+dependencies {
+    compile group: 'net.rakugakibox.util', name: 'yaml-resource-bundle', version: '1.1'
+}
+
+// Apache Commons
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+    compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.3'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+}
+
+// Model Mapper {
+dependencies {
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.7'
+}
+
+// Lombok
+dependencies {
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+    compile group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+}
+
+// Log
+dependencies {
+    // Core
+    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+
+    // Simple Provider
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: slf4jVersion
+}
+
+// Json
+dependencies {
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion
+}
+
+// Deep Learning
+dependencies {
+    // Core
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-core', version: dl4jVersion
+
+    // Xception support
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-zoo', version: dl4jVersion
+
+    // MultiLayerNetwork support
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: dl4jVersion
+
+    // Keras Model support
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-modelimport', version: dl4jVersion
+
+    // Multi GPU support
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-parallel-wrapper', version: dl4jVersion
+
+    // Native Platform
+    compile group: 'org.nd4j', name: 'nd4j-native-platform', version: dl4jVersion
+
+    // Cuda Support
+    compile group: 'org.nd4j', name: 'nd4j-cuda-10.1', version: dl4jVersion
+}
