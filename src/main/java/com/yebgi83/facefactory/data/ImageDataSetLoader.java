@@ -1,4 +1,4 @@
-package com.konantech.facefactory.data;
+package com.yebgi83.facefactory.data;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;

@@ -1,4 +1,4 @@
-package com.konantech.facefactory.model;
+package com.yebgi83.facefactory.model;
 
 import lombok.experimental.UtilityClass;
 import org.deeplearning4j.nn.conf.layers.DenseLayer;

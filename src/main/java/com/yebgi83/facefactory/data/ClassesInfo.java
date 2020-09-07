@@ -1,5 +1,6 @@
-package com.konantech.facefactory.data;
+package com.yebgi83.facefactory.data;
 
+import com.yebgi83.facefactory.util.ResourceUtils;
 import org.apache.commons.collections4.ListUtils;
 
 import java.io.BufferedReader;
@@ -13,13 +14,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static com.konantech.facefactory.util.ResourceUtils.getResourceStream;
-
 public class ClassesInfo {
     public static ClassesInfo fromPath(String path) throws IOException {
         List<String> classNames = null;
 
-        try (InputStream inputStream = getResourceStream(path)) {
+        try (InputStream inputStream = ResourceUtils.getResourceStream(path)) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             while (true) {

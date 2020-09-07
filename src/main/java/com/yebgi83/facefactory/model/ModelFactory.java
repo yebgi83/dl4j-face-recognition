@@ -1,7 +1,7 @@
-package com.konantech.facefactory.model;
+package com.yebgi83.facefactory.model;
 
 
-import com.konantech.facefactory.constants.HyperParameter;
+import com.yebgi83.facefactory.constants.HyperParameter;
 import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.deeplearning4j.nn.transferlearning.FineTuneConfiguration;

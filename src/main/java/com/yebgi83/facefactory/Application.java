@@ -1,9 +1,10 @@
-package com.konantech.facefactory;
+package com.yebgi83.facefactory;
 
-import com.konantech.facefactory.data.ClassesInfo;
-import com.konantech.facefactory.data.ImageDataSetLoader;
-import com.konantech.facefactory.model.ModelFactory;
-import com.konantech.facefactory.util.DataSetUtils;
+import com.yebgi83.facefactory.data.ClassesInfo;
+import com.yebgi83.facefactory.data.ImageDataSetLoader;
+import com.yebgi83.facefactory.model.ModelFactory;
+import com.yebgi83.facefactory.util.DataSetUtils;
+import com.yebgi83.facefactory.util.ResourceUtils;
 import org.apache.commons.io.IOUtils;
 import org.deeplearning4j.datasets.iterator.IteratorDataSetIterator;
 import org.deeplearning4j.earlystopping.EarlyStoppingConfiguration;
@@ -20,8 +21,6 @@ import org.nd4j.evaluation.classification.Evaluation;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
-
-import static com.konantech.facefactory.util.ResourceUtils.getResourceStream;
 
 public class Application {
     private static final String CLASSES_INFO_PATH = "classes.info";
@@ -44,13 +43,13 @@ public class Application {
 
         IteratorDataSetIterator trainDataSetIterator = DataSetUtils.createMiniBatchIterator(
                 BATCH_SIZE,
-                IOUtils.readLines(getResourceStream(TRAIN_PATH), StandardCharsets.UTF_8),
+                IOUtils.readLines(ResourceUtils.getResourceStream(TRAIN_PATH), StandardCharsets.UTF_8),
                 imageDataSetLoader
         );
 
         IteratorDataSetIterator validateDataSetIterator = DataSetUtils.createMiniBatchIterator(
                 BATCH_SIZE,
-                IOUtils.readLines(getResourceStream(VALIDATION_PATH), StandardCharsets.UTF_8),
+                IOUtils.readLines(ResourceUtils.getResourceStream(VALIDATION_PATH), StandardCharsets.UTF_8),
                 imageDataSetLoader
         );
 

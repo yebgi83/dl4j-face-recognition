@@ -1,4 +1,4 @@
-package com.konantech.facefactory.constants;
+package com.yebgi83.facefactory.constants;
 
 public enum HyperParameter {
     LEARNING_RATE(0.001);
